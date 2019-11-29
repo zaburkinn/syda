@@ -1,0 +1,100 @@
+#include <vcl.h>
+#include <stdio.h>
+#include <conio.h>
+#include <iostream>
+#include <math.h>
+#pragma hdrstop
+#pragma argsused
+#include <ctime>
+
+using namespace std;
+))))))))))))))
+int main()
+{
+   srand(time(NULL));
+
+
+   int x, k, i, j, l, sum;
+   int const size = 1000;
+   int arr[size];
+
+
+   cout << "Vvedite koli4estvo elementov massiva (ot 1 do 1000) : ";
+   cin >> k;
+
+   cout << "Viberite sposob " << endl <<
+     "1. Random" << endl <<
+     "2. Vvesti samomy" << endl;
+
+   cin >> x;
+
+   switch (x)
+   {
+   case 1:
+      cout << "Vash massiv sgenerirovan " << endl;
+
+      for (int i = 0; i < k; i++)
+      {
+
+        arr[i] = rand() % 20 - 10;
+        cout << arr[i] << endl;
+      }
+
+      {
+        int el = arr[0];
+        for (int i = 0; i < k; i++)
+        {
+          if(arr[i] > 0)
+          {
+            el = i;
+
+            break;
+          }
+        }
+
+
+
+        {
+          int sum = 0;
+          for (i = (el+1); i < k; i++) {
+            sum += arr[i];
+          }
+          cout << "Summa elementov massiva, raspolozhennih posle pervogo polozhitelnogo elementa = " << endl << sum;
+        }
+
+      }
+
+      getch();
+
+    case 2:
+
+      cout << "Vvedite " << k << " razlichnih elenemtov v svoy massiv" << endl;
+      for (i = 0; i < k; i++) {
+        cin >> arr[i];
+
+      }
+
+      {
+        int el = arr[0];
+
+        for (int i = 0; i < k; i++)
+        {
+          if (arr[i] > 0)
+          {
+            el = i;
+
+            break;
+          }
+          }
+            int sum = 0;
+            for (i = (el+1); i < k; i++)
+            {
+              sum += arr[i];
+            }
+            cout << "Summa elementov massiva, raspolozhennih posle pervogo polozhitelnogo elementa = " << endl << sum;
+          }
+
+        getch();
+
+      }
+}

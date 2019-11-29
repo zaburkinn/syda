@@ -1,0 +1,41 @@
+//---------------------------------------------------------------------------
+#include <vcl.h>
+#include <stdio.h>
+#include <conio.h>
+#include <iostream>
+#include <math.h>
+#pragma hdrstop
+
+//---------------------------------------------------------------------------
+
+#pragma argsused
+using namespace std;
+long double fact(int n)
+{
+if (n<0) return 0;
+if (n==0) return 1;
+else return n * fact(n-1);
+}
+int main ()
+{
+double a,b,h,n,x,y,s;
+int k;
+cout << "Vvedite chislo a: " << endl;
+cin >> a;
+cout << "Vvedite chislo b: " << endl;
+cin >> b;
+cout << "Vvedite chislo h: " << endl;
+cin >> h;
+cout << "Vvedite chislo n: " << endl;
+cin >> n;
+for (x=a;x<=b;x+=h){
+s=0;
+for(k=0;k<=n;k++){
+s=s+(pow((-1),k)*((2*pow(k,2)+1)/fact(2*k))*pow(x,2*k));
+y=(1-pow(x,2)/2)*cos(x)-x/2*sin(x);
+}
+cout <<"Y(x)= " << y << " S(x) = " << s << "     |Y(x)-S(x)| = " << fabs(y-s) << endl;
+}
+getch();
+}
+//---------------------------------------------------------------------------
